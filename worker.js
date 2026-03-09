@@ -23,7 +23,7 @@ height:auto;
 </style>
 </head>
 <body>
-<img src="landing.png">
+<img src="https://i.ibb.co.com/j9zHKbzW/landing.png">
 </body>
 </html>
     `;
@@ -34,3 +34,4 @@ height:auto;
 
   }
 };
+
