@@ -18,7 +18,8 @@ height:100vh;
 }
 img{
 max-width:100%;
-height:auto;
+height:100%;
+object-fit: fill;
 }
 </style>
 </head>
@@ -34,4 +35,5 @@ height:auto;
 
   }
 };
+
 
