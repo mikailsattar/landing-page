@@ -1,6 +1,19 @@
 export default {
   async fetch(request) {
+    const url = new URL(request.url)
 
+    // Redirect www → root domain
+    if (url.hostname === "www.mikailsattar.com") {
+      url.hostname = "mikailsattar.com"
+      return Response.redirect(url.toString(), 301)
+    }
+
+    // Redirect http → https
+    if (url.protocol === "http:") {
+      url.protocol = "https:"
+      return Response.redirect(url.toString(), 301)
+    }
+  
     const html = `
     <!DOCTYPE html>
 <html>
@@ -30,10 +43,12 @@ object-fit: fill;
     `;
 
     return new Response(html, {
-      headers: { "content-type": "text/html" }
-    });
-
-  }
-};
+      headers: {
+        "content-type": "text/html;charset=UTF-8",
+        "cache-control": "public, max-age=3600"
+      }
+  })
+}
+}
 
 
