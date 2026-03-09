@@ -1,10 +1,7 @@
+name = "landing-page"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
 [[routes]]
 pattern = "mikailsattar.com"
 custom_domain = true
-
-name = "landing-page"
-main = "worker.js"
-
-
-compatibility_date = "2024-01-01"
-
